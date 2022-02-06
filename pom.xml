@@ -25,15 +25,32 @@
 	</properties>
 
 	<dependencies>
-                        <dependency>
-  <groupId>com.mt</groupId>
-  <artifactId>maven-stanalone-application</artifactId>
-  <version>0.0.1-20220126.133409-1</version>
-</dependency>
-		
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
-
+          
+     <distributionManagement>
+	
+	    <repository>
+	      <id>nexus</id>
+	      <name>standalone Releases Repository</name>
+	      <url>http://13.232.249.190:9980/sudhakarreddy/repository/standaloneapp/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>standalone Snapshot Repository </name>
+	      <url>http://13.232.249.190:9980/sudhakarreddy/repository/standalonejar/</url>
+	    </snapshotRepository>
+	    
+	</distributionManagement>
+          
 	<!-- Committing and updating changes through Maven, by using below mvn command. 
 		For Commiting mvn -Dmessage="Updated using maven" scm:checkin For updating 
 		mvn scm:update -->
